@@ -1,0 +1,17 @@
+#addition, #subtraction, #multiplication, #division{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    border: 1px solid black;
+    background-color: #7e7e7e;
+    color: white;
+    text-align: center;
+}
+
+.clear {
+    width: 50px;
+    height: 25px;
+    border: 1px solid black;
+    text-align: center;
+
+}
