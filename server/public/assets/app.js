@@ -10,19 +10,26 @@ $(document).ready(function(){
     $("#addition").on('click', function(){
        toBeCalculated.calculation = "add";
         getAnswer();
-        return console.log(toBeCalculated);
+        //return console.log(toBeCalculated);
     });
     $("#subtraction").on('click', function(){
         toBeCalculated.calculation = "subtract";
-        return console.log(toBeCalculated);
+        getAnswer();
+        //return console.log(toBeCalculated);
     });
     $("#multiplication").on('click', function(){
         toBeCalculated.calculation = "multiply";
-        return console.log(toBeCalculated);
+        getAnswer();
+        //return console.log(toBeCalculated);
     });
     $("#division").on('click', function(){
         toBeCalculated.calculation = "divide";
-        return console.log(toBeCalculated);
+        getAnswer();
+        //return console.log(toBeCalculated);
+    });
+
+    $("#clearBtn").on('click', '.clear', function(){
+        $(".result").empty();
     });
 
 
@@ -41,7 +48,6 @@ function calcValOne (){
 
     $("#inputValOne").find("input[type=text]").val("");
 
-    console.log(toBeCalculated);
 }
 
 function calcValTwo(){
@@ -50,8 +56,6 @@ function calcValTwo(){
     });
 
     $("#inputValTwo").find("input[type=text]").val("");
-
-    console.log(toBeCalculated);
 
 }
 
@@ -65,7 +69,7 @@ function getAnswer(){
        // },
     success: function postAnswer(data){
         console.log(data);
-        $('#answer').children().last().append("<span>" + data + "</span>");
+        $(".result").text(data);;
     }
 
 });

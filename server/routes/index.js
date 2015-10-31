@@ -11,7 +11,7 @@ router.post('/math', function(req, res, next){
     //console.log(req);
     var calc = req.body;
     var data = theMath(calc);
-    console.log(data);
+    //console.log(data);
     res.send(JSON.stringify(data));//res.send(theMath(calc));
    // res.send('ok');
 });
